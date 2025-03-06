@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo Síncrono</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+            position: relative;
+        }
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+        }
+        .box {
+            width: 50px;
+            height: 30px;
+            background-color: rgb(0, 255, 76);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .line {
+            width: 100px;
+            height: 3px;
+            background-color: black;
+            position: relative;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Fluxo de Programação Síncrona</h2>
+
+    <div class="container">
+        <div class="step">
+            <div class="box">1ª</div>
+            <span>1ª solicitação</span>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+            <div class="box">2ª</div>
+            <span>1ª resultado</span>
+        </div>
+        <div class="line"></div>
+        <div class="step">
+            <div class="box">✔</div>
+            <span>2° resultado</span>
+        </div>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <p>2° solicitação</p>
+    </div>
+
+</body>
+</html>

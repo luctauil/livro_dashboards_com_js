@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon API - Pikachu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pokémon</h1>
+    <h2 id="nome">Carregando...</h2>
+    <img id="imagem" src="" alt="Imagem do Pokémon">
+
+    <script>
+        function buscarPokemon() {
+            fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+
+                    document.getElementById("nome").textContent = data.name;
+                    document.getElementById("imagem").src = data.sprites.front_default;
+                })
+                .catch(error => console.error("Erro ao buscar Pokémon:", error));
+        }
+        buscarPokemon(); // Chama a função ao carregar a página
+    </script>
+
+</body>
+</html>
