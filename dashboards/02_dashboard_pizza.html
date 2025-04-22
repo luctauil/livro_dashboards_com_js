@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Visualização de Dados</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Dashboard 2</h1>
+        <p class="lead text-center">Visualização interativa de dados</p>
+
+        <div class="my-5" style="width: 50%;">
+            <input type="text" id="vendedor" class="form-control" placeholder="Digite o nome do vendedor...">
+            <input type="text" id="valor" class="form-control mt-2" placeholder="Digite o valor total da venda...">
+            
+            <select id="escolha_cor" class="form-select mt-2">
+                <option value="red">Vermelho</option>
+                <option value="blue">Azul</option>
+                <option value="green">Verde</option>
+                <option value="yellow">Amarelo</option>
+                <option value="purple">Roxo</option>
+                <option value="orange">Laranja</option>
+                <option value="pink">Rosa</option>
+                <option value="gray">Cinza</option>
+                <option value="black">Preto</option>
+                <option value="white">Branco</option>
+                <option value="brown">Marrom</option>
+            </select>
+
+            <button id="adicionar" class="btn btn-primary mt-2" onclick="AdicionarValor()">Adicionar</button>
+        </div>
+
+        <div class="my-5" style="width: 50%;">
+            <canvas id="meu_dashboard"></canvas>
+        </div>
+
+        <div class="text-center">
+        <a href="menu_dashboards.html" class="btn btn-primary">⬅ Voltar para os Dashboards</a>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light py-3 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">Dashboard Interativo - Capítulo 7 | © 2025 Lucas Tauil</p>
+        </div>
+    </footer>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Nossas funções de limpeza -->
+    <script src="scripts/utilitarios.js"></script>
+
+    <!-- Script do gráfico -->
+    <script src="scripts/02_dashboard.js"></script>
+</body>
+</html>
