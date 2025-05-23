@@ -44,7 +44,7 @@ function MontarDashboard() {
         borderColor: cores[index % cores.length],
     }));
 
-    const grafico = new Chart(ctx, {
+    const dashboard = new Chart(ctx, {
         type: 'line',
         data: {
             labels: labels,

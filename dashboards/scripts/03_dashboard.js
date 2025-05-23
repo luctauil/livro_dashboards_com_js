@@ -51,7 +51,7 @@ const valores = historico.map(d => d.fechamento); // [502000, 508000, ..., 52035
 
 // Cria o gráfico
 const ctx = document.getElementById('meu_dashboard').getContext('2d');
-const grafico = new Chart(ctx, {
+const dashboard = new Chart(ctx, {
     type: 'line', //Só muda para o tipo linhas.
     data: {
         labels: labels,
