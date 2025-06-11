@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Importador de Dados para Dashboards</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  
+  
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="text-center mb-4">Mapa do Brasil com GeoJSON</h1>
+    <p class="lead text-center">
+        Este exemplo apresenta apenas o primeiro uso do mapa com o GeoJSON do Brasil.
+    </p>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div id="map" style="width: 100%; height: 350px;"></div>
+        </div>
+    </div>
+
+      <div class="text-center mt-4">
+        <a href="menu_dashboards.html" class="btn btn-primary">⬅ Voltar para os Dashboards</a>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-light py-3 mt-5">
+    <div class="container text-center">
+      <p class="mb-0">Mapa | © 2025 Lucas Tauil</p>
+    </div>
+  </footer>
+
+      <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Nossas funções - Importador agora está aqui -->
+    <script src="scripts/utilitarios.js"></script>
+
+    <!-- Script do gráfico -->
+    <script src="scripts/07_dashboard.js"></script>
+</body>
+</html>

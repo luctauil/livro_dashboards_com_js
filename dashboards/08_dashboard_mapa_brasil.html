@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Importador de Dados para Dashboards</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="text-center mb-4">Informações Federativa</h1>
+    <p class="lead text-center">
+        Este exemplo apresentado no livro utiliza como fonte o banco de dados público disponível no 
+        <a href="https://dados.gov.br/dados/conjuntos-dados/resultado-da-arrecadacao" target="_blank">
+            portal de dados abertos do Governo Federal</a>.
+    </p>
+    <p class="lead text-center">
+        Você pode acessar os dados diretamente pelo link acima ou baixar o arquivo de exemplo no botão abaixo:
+    </p>
+
+    <div class="row mb-4">
+        <div class="col-md-6 offset-md-3 text-center">
+            <a href="../dados/arrecadacao-estado.csv" download class="btn btn-outline-primary w-100">
+            ⬇ Baixar arquivo de exemplo (.csv)
+            </a>
+        </div>
+    </div>
+
+    <p class="lead">
+        Após baixar o arquivo, você pode carregá-lo clicando no botão abaixo. Ao carregá-lo, você poderá ver os dados prontos no console (F12).
+    </p>
+
+
+    <div class="row mb-4">
+      <div class="col-md-6 offset-md-3">
+        <input type="file" id="inputArquivo" class="form-control" accept=".csv" onchange="lerArquivoPontoEVirgula()">
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="row mb-4">
+      <div class="col-md-6 offset-md-3 text-center">
+          <p class="lead">
+              Após carregar o arquivo, aperte os botões e veja os <i>insights</i> no mapa.
+          </p>
+        <a type="button"  class="btn btn-success" accept=".csv" onclick="CarregarTotaisPorImposto()">Carregar Totais</a>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="row mb-4">
+      <div class="col-6">
+        <select id="selectAno" class="form-control">
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+        </select>
+      </div>
+
+      <div class="col-6">
+        <a class="btn btn-primary" onclick="CarregarTotaisPorAno()">Ver Total do ano</a>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div id="map" style="width: 100%; height: 350px;"></div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <p id="legendas"></p>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="menu_dashboards.html" class="btn btn-primary">⬅ Voltar para os Dashboards</a>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-light py-3 mt-5">
+    <div class="container text-center">
+      <p class="mb-0">Mapa | © 2025 Lucas Tauil</p>
+    </div>
+  </footer>
+
+    <!-- Nossas funções - Importador agora está aqui -->
+    <script src="scripts/utilitarios.js"></script>
+
+    <!-- Script do gráfico -->
+    <script src="scripts/08_dashboard.js"></script>
+</body>
+</html>
