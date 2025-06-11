@@ -1,3 +1,5 @@
+const url_geojson = '../../dados/br_states.json';
+
 const map = L.map('map').setView([-14.2350, -51.9253], 3);
 var camadaEstados = null;
 var max = 0;
@@ -47,7 +49,7 @@ function DadosPopulacionais(tipo = 'Total') {
 
     const somasPopulacao = {};
 
-    fetch('/dados/br_states.json')
+    fetch(url_geojson)
         .then(response => response.json())
         .then(data => {
 

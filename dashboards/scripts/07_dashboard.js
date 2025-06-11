@@ -1,3 +1,5 @@
+const url_geojson = '../../dados/br_states.json';
+
 
 /* Carrega o Mapa */
 onload = () => {
@@ -6,7 +8,7 @@ onload = () => {
         maxZoom: 20,
     }).addTo(map);
 
-    fetch('/dados/br_states.json')
+    fetch(url_geojson)
         .then(response => response.json())
         .then(data => {
             console.log(data);

@@ -1,3 +1,5 @@
+const url_geojson = '../../dados/br_states.json';
+
 const map = L.map('map').setView([-14.2350, -51.9253], 3);
 var camadaEstados = null;
 const somasPorEstado = {};
@@ -39,7 +41,7 @@ function CarregarTotaisPorImposto() {
     min = Math.min(...valores);
 
     // Atualiza o mapa com as cores
-    fetch('/dados/br_states.json')
+    fetch(url_geojson)
         .then(response => response.json())
         .then(data => {
 
@@ -119,7 +121,7 @@ function CarregarTotaisPorAno() {
     max = Math.max(...valores);
     min = Math.min(...valores);
 
-    fetch('../../dados/br_states.json')
+    fetch(url_geojson)
         .then(r => r.json())
         .then(data => {
             camadaEstados = L.geoJSON(data, {
