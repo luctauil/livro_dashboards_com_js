@@ -6,7 +6,7 @@ onload = () => {
         maxZoom: 20,
     }).addTo(map);
 
-    fetch('../../dados/br_states.json')
+    fetch('/dados/br_states.json')
         .then(response => response.json())
         .then(data => {
             console.log(data);

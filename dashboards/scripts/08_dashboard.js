@@ -39,7 +39,7 @@ function CarregarTotaisPorImposto() {
     min = Math.min(...valores);
 
     // Atualiza o mapa com as cores
-    fetch('../../dados/br_states.json')
+    fetch('/dados/br_states.json')
         .then(response => response.json())
         .then(data => {
 
