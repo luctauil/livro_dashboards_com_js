@@ -1,4 +1,4 @@
-const url_geojson = '../../dados/br_states.json';
+const url_geojson = '/livro_dashboards_com_js/dados/br_states.json';
 
 
 /* Carrega o Mapa */

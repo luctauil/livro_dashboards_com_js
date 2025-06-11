@@ -1,4 +1,4 @@
-const url_geojson = '../../dados/br_states.json';
+const url_geojson = '/livro_dashboards_com_js/dados/br_states.json';
 
 const map = L.map('map').setView([-14.2350, -51.9253], 3);
 var camadaEstados = null;
