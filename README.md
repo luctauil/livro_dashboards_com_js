@@ -3,8 +3,7 @@
 Bem-vindo(a) ao repositório oficial do livro **"Criando seus próprios Dashboards Interativos com JavaScript"**! 🚀  
 
 **Link do projeto publicado:**
-[Aprenda JavaScript com Dashoboards]([https://www.casadocodigo.com.br/products/livro-js-dashboards](https://luctauil.github.io/livro_dashboards_com_js/)  
-
+[Aprenda JavaScript com Dashoboards](https://luctauil.github.io/livro_dashboards_com_js/)  
 
 **Link do livro:**
 [Aprenda JavaScript com Dashoboards](https://www.casadocodigo.com.br/products/livro-js-dashboards)
